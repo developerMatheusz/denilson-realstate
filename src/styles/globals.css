@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 250ms ease-in-out,
+    transform 250ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 250ms ease-in-out,
+    transform 250ms ease-in-out;
+}
+
+.custom-bg-transition {
+  transition: background-position 0.7s ease;
+}
+
+.custom-bg-transition:hover {
+  background-position-y: 9em;
+}
+
+.custom-bg-immobile-transition {
+  transition: background-position-y 0.7s ease;
+}
+
+.custom-bg-immobile-transition:hover {
+  background-position-y: 7em;
+}
